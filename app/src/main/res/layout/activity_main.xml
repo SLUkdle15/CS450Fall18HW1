@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_0"
-            android:textSize="148sp"
+            android:textSize="70sp"
             android:id="@+id/tv_count"
         />
         <LinearLayout
@@ -29,16 +29,16 @@
                 android:layout_weight="1"
                 android:text="@string/start"
                 android:id="@+id/bt_start"
-                android:padding="20dp"
-                android:layout_marginTop="100dp"/>
+                android:padding="6dp"
+                android:layout_marginTop="75dp"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/stop"
                 android:id="@+id/bt_stop"
-                android:padding="20dp"
-                android:layout_marginTop="100dp"/>
+                android:padding="6dp"
+                android:layout_marginTop="75dp"/>
         </LinearLayout>
     </LinearLayout>
 
