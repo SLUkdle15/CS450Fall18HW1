@@ -2,6 +2,7 @@ package edu.stlawu.stopwatch;
 
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.media.AudioAttributes;
 import android.media.SoundPool;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         // initialize views
         this.tv_count = findViewById(R.id.tv_count);
         this.bt_start = findViewById(R.id.bt_start);
@@ -91,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
                     bt_stop.setBackgroundColor(Color.RED);
                     bt_start.setText("Reset");
                     bt_start.setEnabled(true);
+
                    ////restart the timer and Timer Task
                     int minute = ctr.getMm();
                     int second = ctr.getSs();
@@ -113,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
                 anim.start();
             }
         });
+
         //load the saved data
         int tenth_second = getPreferences(MODE_PRIVATE)
                 .getInt("TENTH_SECOND", 0);
