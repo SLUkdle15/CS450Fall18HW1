@@ -122,14 +122,16 @@ public class MainActivity extends AppCompatActivity {
         this.t = new Timer();
         this.tv_count.setText(ctr.toTheString());
 
+        bt_stop.setBackgroundColor(Color.GRAY);
+
         if(!this.tv_count.getText().equals("00:00.0")){
             bt_start.setText("Reset");
             bt_stop.setText("Resume");
+            bt_stop.setBackgroundColor(Color.BLUE);
         }else{
             this.bt_stop.setEnabled(false);
         }
         this.bt_start.setBackgroundColor(Color.GREEN);
-        bt_stop.setBackgroundColor(Color.GRAY);
     }
 
     private void restart_timer(int minute,int second,int tenth_second){
